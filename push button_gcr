@@ -1,0 +1,19 @@
+int led1 = 12;
+int led2 = 13;
+int pb = 2;
+bool on = false;
+
+void setup(){
+  pinMode(led1,OUTPUT);
+  pinMode(led2,OUTPUT);
+  pinMode(pb,INPUT_PULLUP);
+}
+
+void loop(){
+  if(digitalRead(pb) == 0){
+     digitalWrite(led1,on);
+    on = !on; 
+    digitalWrite(led2,on);
+    
+  }
+}
